@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challeng Encriptador</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/Logo.png" alt="imagen de logo" class="header__logo">
+    </header>
+    <main class="main">
+        <!---------------- sección Encriptador ------------------->
+        <section class="main__seccion__encriptador">
+            <textarea  id="textoEntrada" class="encriptador__textarea" placeholder="Ingrese el texo aquí"></textarea>
+            <div class="encriptador__mensaje">
+                <img src="assets/exclamation.png" alt="imagen de alerta" class="encriptador__alert__img">
+                <p class="encriptador__alert-text">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="encriptador__buttons">
+                <button id="botonEncriptar" class="main__buttons encriptador__button--encriptar" onclick="encriptarTexto()">
+                    Encriptar
+                </button>
+                <button id="botonDesencriptar" class="main__buttons encriptador__button--desencriptar" onclick="desencriptarTexto()">
+                    Desencriptar
+                </button>
+            </div>
+        </section>
+        <!--------------- sección Resultado -------------------->
+        <section class="main__section__resultado">
+            <textarea  id="textoResultado" class="resultado__textarea" style="display: none;" ></textarea>
+            <img id="resultadoMunieco" src="assets/Muñeco.png" alt="imagen del Muñeco" class="resultado__munieco">
+            <div id="resultadoInformacion" class="resultado__informacion">
+                <p class="resultado_texto-negrita">Ningún mensaje fue encontrado</p>
+                <p class="resultado_texto-mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <span id="mensajeCopiado" class="resultado__texto-copiado" style="display: none;">Texto copiado!</span>
+            <button id="botonCopiar" class="main__buttons resultado__button--copiar" onclick="copiarTexto();" style="display: none;">Copiar</button>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <p class="footer__informacion">© 2024 Desarrollado por Jean Pier Paulino</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
